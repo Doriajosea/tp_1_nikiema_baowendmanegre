@@ -26,31 +26,23 @@ if($_POST) {
         echo "</br> Vous n'avez pas confirmé votre mot de passe. Veuillez le faire s'il vous plait.";
 
     }
-    /*elseif(empty($confirmationPasse && $passe)) {
-        echo "</br> Vous n'avez pas mis de mot de passe et le confirmer votre mot de passe. Veuillez le faire s'il vous plait.";
-
-    }*/
+    
 
     else {
         echo "</br> Votre nom est : " . $nom;
         echo "</br> Votre prenom est : " . $prenom;
-        
-
     }
 
 
 
     $passwordLengthIsValid = passwordLengthIsValid($_POST['fpasse']);
+    $passwordLengthIsValid = passwordLengthIsValid($_POST['fconfirmationpasse']);
     echo"</br>";
     var_dump($passwordLengthIsValid);
 
-    /*if (!$nameLengthIsValid['isValid']) {
-        
-    }
-    echo'</br>';*/
-    //$sal
+    
 
-
+//Pour confirmer le mot de passe
     if ($confirmationPasse != $passe) {
         echo "<h1> La confirmation de votre mot de passe n'a pas eu lieu. Veuillez la refaire s'il vous plait.</h1>";
         //return $passe;

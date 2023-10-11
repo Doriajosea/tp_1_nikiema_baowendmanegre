@@ -8,6 +8,8 @@ function passwordLengthIsValid($passwordToValid){
         "message" => ""
     ];
 
+
+    //Pour la verification de la taille du mot de passe
     if ($length < 6) {
         $reponses = [
             "valid" => false,
@@ -23,11 +25,13 @@ function passwordLengthIsValid($passwordToValid){
 
 return $reponses;
 }
+
+//Cette partie est pour l'encodage du mot de passe
 function addSalt($passwordToSalt) {
     $salt = 'mdpsale123!';
     $saltedName = $salt.$passwordToSalt.$salt;
 
-    //return $saltedName;
+    return $saltedName;
 }
 
 
